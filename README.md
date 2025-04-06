@@ -11,7 +11,7 @@ This repository contains the Dockerized version of my **portfolio website** buil
 
 ### 1. Clone the repository
 If you haven't cloned the repository yet, you can do so by running:
-git clone https://github.com/yourusername/kaur_jaspreet_final_site.git
+git clone https://github.com/jkaur207/kaur_jaspreet_final_site.git
 cd kaur_jaspreet_final_site
 
 ### 2. Build the Docker image
