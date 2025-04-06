@@ -1,38 +1,306 @@
-.App {
-  text-align: center;
-}
+/* Import Bold Cursive Font */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Dancing+Script:wght@700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Global Styles */
+body {
+  font-family: 'Alegreya', serif;
+  background-color: #F9F3E9;
+  color: #3E3E3E;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header with Navbar Right-Aligned */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #E2B97F;
+  padding: 25px 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Navigation Right-Aligned */
+.header nav {
+  margin-left: auto; /* Pushes nav to the right */
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav li {
+  margin-left: 30px; /* Space between nav items */
+}
+
+.header nav a {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #3E3E3E;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.header nav a:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* Centered Footer */
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 30px;
+  background: #6E4B3A;
+  color: #F9F3E9;
+  margin-top: auto;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Rest of your existing styles... */
+.section-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 60px 0 40px;
+  color: #6E4B3A;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Cards container for resources and work */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 50px;
+  padding: 20px 0;
+  margin: 40px 0;
+}
+
+.card, .resource-card, .work-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(110, 75, 58, 0.1);
+}
+
+/* Add Hover Effect to Cards */
+.card:hover, .resource-card:hover, .work-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .header nav {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .header nav ul {
+    justify-content: center;
+  }
+  
+  .header nav li {
+    margin: 0 15px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .cards-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header nav li {
+    margin: 5px 0;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .card, .resource-card, .work-card {
+    padding: 25px;
+  }
+}
+
+/* Import Bold Cursive Font */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Dancing+Script:wght@700&display=swap');
+
+
+
+/* Skills Section */
+/* Skills Section - Elegant List Style */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #6E4B3A;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #E2B97F;
+  margin: 1rem auto 0;
+}
+
+.skills-category {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(176, 124, 83, 0.1);
+  border: 2px solid #F7D8B7;
+}
+
+.skills-category h3 {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #6E4B3A;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #F7D8B7;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: #FFF9F0;
+  color: #6E4B3A;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(176, 124, 83, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(226, 185, 127, 0.2), transparent);
+  transition: width 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(176, 124, 83, 0.1);
+}
+
+.skills-list li:hover::before {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  h2 {
+    font-size: 2.8rem;
+  }
+  
+  .skills-category h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+  
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+  }
+  
+  .skills-category {
+    padding: 1.5rem;
   }
 }
